@@ -1,5 +1,9 @@
 .idea/
+<<<<<<< Updated upstream
 pyenv_da/
 .DS_Store
 jenkins_data/
 *.pyc
+=======
+pyenv_da/
+>>>>>>> Stashed changes

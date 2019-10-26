@@ -1,7 +1,10 @@
 import wiktionaryReader
 import mirriamReader
 import argparse
+from wordData import wordData
 import logging
+
+from pprint import pprint
 
 
 def main():
@@ -15,17 +18,30 @@ def main():
 
     args = input_parser.parse_args()
 
-    if args.wiki and args.mirriam:
-        # Lookup word in wiki and mirriam
-        print(f'Look up {args.word} in wiki and mirriam')
-    elif args.wiki:
-        # Lookup word in wiki
-        print(f'Look up {args.word} in wiki')
-    else:
-        # Lookup word in mirriam
-        print(f'Look up {args.word} in mirriam')
+    words = args.word.split(",")
+    wiki = wiktionaryReader.wiktionaryReader()
+    mirriam = mirriamReader.mirriamReader()
+
+    if len(words) > 2:
+        print("Sorry, this only accepts two words.")
+        exit(1)
+
+    word_data = []
+    for word in words:
+        new_word = wordData(word)
+        if args.wiki and args.mirriam:
+            # Lookup word in wiki and mirriam
+            new_word.set_definition_list(wiki.word_definition((word)))
+        elif args.wiki:
+            # Lookup word in wiki
+            new_word.set_definition_list(wiki.word_definition((word)))
+        else:
+            # Lookup word in mirriam
+            print(f'Look up {new_word.word} in mirriam')
+        word_data.append(new_word)
+
+    
 
 
 if __name__ == "__main__":
-
     main()
