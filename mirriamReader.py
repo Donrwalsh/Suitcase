@@ -1,4 +1,5 @@
 import dictionaryApiBaseClass
+import logging
 
 class mirriamReader(dictionaryApiBaseClass.dictionaryAPIBaseClass):
 
@@ -6,4 +7,4 @@ class mirriamReader(dictionaryApiBaseClass.dictionaryAPIBaseClass):
         pass
 
     def hello_world(self):
-        print("Hey pal, this one goes to mirriam!!")
+        pass
