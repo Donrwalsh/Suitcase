@@ -1,5 +1,4 @@
-import random
-
+from .letter_attributes import *
 
 class utility:
 
@@ -27,5 +26,14 @@ class utility:
             letter_list.append(letter)
 
         return letter_list
+
+    @staticmethod
+    def is_vowel(letter):
+        if letter in vowels:
+            return True
+        else:
+            return False
+
+
 
 

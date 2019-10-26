@@ -1,6 +1,6 @@
 # Vowels
 
-vowels = ["a", "e", "i", "o", "u"]
+vowels = ["a", "e", "i", "o", "u", "y"]
 
 # Consonants
 

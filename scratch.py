@@ -32,6 +32,13 @@
     word_one = word_data[0].word
     word_two = word_data[1].word
 
+# Specific word combine method print statements
+
+print(f'Halves Word Is: {halves.combine.words(word_one, word_two).word}')
+print(f'Without Replacement Word Is: {without_replacement.combine.words(word_one, word_two).word}')
+print(f'Without Replacement and Random Vowels Word Is: {without_replacement_random_vowels.combine.words(word_one,
+                                                                                                        word_two).word}')
+
     print(f'{word_one}\n'
            f'{word_data[0].definition_list}')
 
@@ -39,5 +46,5 @@
            f'{word_data[1].definition_list}')
 
     test = combiner()
-    print(f'Final Word Is: {test.combine_words(word_one, word_two)}')
-    print(f'Other Final Word Is: {test.combine_words_two(word_one, word_two)}')
+    print(f'Final Word Is: {test.combine_by_halves(word_one, word_two)}')
+    print(f'Other Final Word Is: {test.combine_without_replacement(word_one, word_two)}')
