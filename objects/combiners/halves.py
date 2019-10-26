@@ -1,5 +1,5 @@
 from .combiner import combiner
-import utility
+from .utility import *
 import random
 from objects.wordData import wordData
 

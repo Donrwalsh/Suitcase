@@ -1,9 +1,9 @@
 from .combiner import combiner
-import utility
+from .utility import *
 import random
 from objects.wordData import wordData
 
-class halves(combiner):
+class without_replacement(combiner):
 
     @staticmethod
     def combine_words(word_one, word_two):

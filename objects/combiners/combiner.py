@@ -1,7 +1,5 @@
-from abc import ABC
-
-class combiner(ABC):
+class combiner():
 
     @staticmethod
-    def combine_words(self):
+    def combine_words(word_one, word_two):
         pass
