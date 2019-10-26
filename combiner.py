@@ -28,11 +28,11 @@ class combiner:
             selector = random.randint(0, 1)
             if selector == 0 and len(letter_list_one) > 0:
                 random_index = random.randint(0, len(letter_list_one)-1)
-                new_word.word = new_word.word + letter_list_one[random_index]
+                final_word.word = final_word.word + letter_list_one[random_index]
                 letter_list_one.pop(random_index)
             elif selector == 1 and len(letter_list_two) > 0:
                 random_index = random.randint(0, len(letter_list_two)-1)
-                new_word.word = new_word.word + letter_list_two[random_index]
+                final_word.word = final_word.word + letter_list_two[random_index]
                 letter_list_two.pop(random_index)
             else:
                 print('Something went wrong with this.')
