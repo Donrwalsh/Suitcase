@@ -2,3 +2,4 @@
 pyenv_da/
 .DS_Store
 jenkins_data/
+*.pyc
