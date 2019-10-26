@@ -1,26 +1,28 @@
 import random
 from utility import utility
+from objects.wordData import wordData
 
 class combiner:
 
     def __init__(self):
         pass
 
-    def combine_words(self, word_one, word_two, final_word):
+    def combine_words(self, word_one, word_two):
 
         beginnings = [utility.halve_word(word_one.word)['beginning'], utility.halve_word(word_two.word)['beginning']]
         ends = [utility.halve_word(word_two.word)['endpoint'], utility.halve_word(word_two.word)['endpoint']]
 
         beginning_value = random.randint(0,1)
         ending_value = random.randint(0,1)
-        final_word.word = (beginnings[beginning_value] + ends[ending_value])
+        final_word = wordData(beginnings[beginning_value] + ends[ending_value])
 
         return final_word
 
-    def combine_words_two(self, word_one, word_two, final_word):
+    def combine_words_two(self, word_one, word_two):
 
         letter_list_one = utility.create_letter_list(word_one)
         letter_list_two = utility.create_letter_list(word_two)
+        final_word = wordData('')
 
         max_length = len(letter_list_one) + len(letter_list_two)
 
