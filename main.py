@@ -17,9 +17,11 @@ def main():
     word_combiners = [halves, without_replacement, without_replacement_random_vowels]
 
     random_word_combiner = random.choice(word_combiners)
-    print(f'Combiner is {str(random_word_combiner)}')
     print(f'word_one: {word_one.word} |  word_two: {word_two.word}')
     print(f'Combined Word is: {random_word_combiner.combine.words(word_one, word_two).word}')
+
+    wiki = wiktionary_reader.wiktionaryReader()
+     word_one.definition_list = wiki.def
 
 
 if __name__ == "__main__":
