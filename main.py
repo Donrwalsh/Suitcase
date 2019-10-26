@@ -1,13 +1,24 @@
 import wiktionaryReader
 import mirriamReader
 import argparse
-from wordData import wordData
-import logging
-
-from pprint import pprint
+from objects.wordData import wordData
+from combiner import combiner
+import random
 
 
 def main():
+
+    words = ['gorilla', 'friend', "python", "jumble", "easy", "difficult", "answer",  "xylophone", "earsplitting",
+             "utmost", "unsightly", "efficacious", "contagious", "amusement"]
+
+    word_one = words[random.randint(0, len(words)-1)]
+    word_two = words[random.randint(0, len(words)-1)]
+
+
+    test = combiner()
+    print(f'word_one: {word_one},  word_two: {word_two}')
+    print(f'Final Word Is: {test.combine_words(word_one, word_two)}')
+    print(f'Other Final Word Is: {test.combine_words_two(word_one, word_two)}')
 
     # Argparse block - built to test functionality
     input_parser = argparse.ArgumentParser(description='For the purpose of testing distinct dictionary calls at CLI')
@@ -40,8 +51,18 @@ def main():
             print(f'Look up {new_word.word} in mirriam')
         word_data.append(new_word)
 
-    
+    word_one = word_data[0].word
+    word_two = word_data[1].word
 
+    print(f'{word_one}\n'
+           f'{word_data[0].definition_list}')
+
+    print(f'{word_two}\n'
+           f'{word_data[1].definition_list}')
+
+    test = combiner()
+    print(f'Final Word Is: {test.combine_words(word_one, word_two)}')
+    print(f'Other Final Word Is: {test.combine_words_two(word_one, word_two)}')
 
 if __name__ == "__main__":
     main()
