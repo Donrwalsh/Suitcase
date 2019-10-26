@@ -1,9 +1,9 @@
-import baseDictApi
+from .baseDictApi import dictionaryAPIBaseClass
 from wiktionaryparser import WiktionaryParser
 import random
 
 
-class wiktionaryReader(baseDictApi.dictionaryAPIBaseClass):
+class wiktionaryReader(dictionaryAPIBaseClass):
 
     def __init__(self):
         self.parser = WiktionaryParser()

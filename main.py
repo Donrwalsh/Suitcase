@@ -1,4 +1,4 @@
-import wiktionaryReader
+import objects.dictApi.wiktionaryReader
 import mirriamReader
 import argparse
 from objects.wordData import wordData
