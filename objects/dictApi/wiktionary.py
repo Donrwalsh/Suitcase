@@ -3,7 +3,7 @@ from wiktionaryparser import WiktionaryParser
 import random
 
 
-class wiktionaryReader(dictionaryAPIBaseClass):
+class wiktionary(dictionaryAPIBaseClass):
 
     def __init__(self):
         self.parser = WiktionaryParser()

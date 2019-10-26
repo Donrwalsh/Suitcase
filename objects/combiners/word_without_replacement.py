@@ -12,17 +12,14 @@ class combine(combiner):
         final_word = wordData('')
 
         if len(letter_list_one) == 1 or len(letter_list_two) == 1:
-            final_word.word = 'That\'s not very fun, try again!'
-            return final_word
+            print('That\'s not very fun, try again!')
+            exit(0)
 
         max_length = len(letter_list_one) + len(letter_list_two)
 
         while max_length > 1:
             selector = random.randint(0, 1)
-            if len(letter_list_one) == 1 and len(letter_list_two) == 1:
-                final_word.word = 'That\'s not very fun, try again!'
-                return final_word
-            elif selector == 0:
+            if selector == 0:
                 random_index = random.randint(0, len(letter_list_one)-1)
                 final_word.word = final_word.word + letter_list_one[random_index]
                 letter_list_one.pop(random_index)
