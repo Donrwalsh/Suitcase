@@ -3,10 +3,10 @@ from .utility import *
 import random
 from objects.wordData import wordData
 
-class without_replacement(combiner):
+class combine(combiner):
 
     @staticmethod
-    def combine_words(word_one, word_two):
+    def words(word_one, word_two):
         letter_list_one = utility.create_letter_list(word_one)
         letter_list_two = utility.create_letter_list(word_two)
         final_word = wordData('')

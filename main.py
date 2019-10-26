@@ -16,9 +16,9 @@ def main():
 
 
     print(f'word_one: {word_one.word},  word_two: {word_two.word}')
-    halfs = halves.halves.combine_words(word_one, word_two)
+    halfs = halves.combine.words(word_one, word_two)
     print(f'Final Word Is: {halfs.word}')
-    mix = without_replacement.without_replacement.combine_words(word_one, word_two)
+    mix = without_replacement.combine.words(word_one, word_two)
     print(f'Other Final Word Is: {mix.word}')
 
     exit(0)
