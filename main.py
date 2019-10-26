@@ -8,17 +8,23 @@ import random
 
 def main():
 
-    words = ['gorilla', 'friend', "python", "jumble", "easy", "difficult", "answer",  "xylophone", "earsplitting",
+    test_words = ['gorilla', 'friend', "python", "jumble", "easy", "difficult", "answer",  "xylophone", "earsplitting",
              "utmost", "unsightly", "efficacious", "contagious", "amusement"]
 
-    word_one = words[random.randint(0, len(words)-1)]
-    word_two = words[random.randint(0, len(words)-1)]
+    word_one = wordData(test_words[random.randint(0, len(test_words)-1)])
+    word_two = wordData(test_words[random.randint(0, len(test_words)-1)])
+    final_word = wordData('')
 
 
     test = combiner()
-    print(f'word_one: {word_one},  word_two: {word_two}')
-    print(f'Final Word Is: {test.combine_words(word_one, word_two)}')
-    print(f'Other Final Word Is: {test.combine_words_two(word_one, word_two)}')
+
+    print(f'word_one: {word_one.word},  word_two: {word_two.word}')
+    halves = test.combine_words(word_one, word_two, final_word)
+    print(f'Final Word Is: {halves.word}')
+    mix = test.combine_words_two(word_one, word_two, final_word)
+    print(f'Other Final Word Is: {mix.word}')
+
+    exit(0)
 
     # Argparse block - built to test functionality
     input_parser = argparse.ArgumentParser(description='For the purpose of testing distinct dictionary calls at CLI')
@@ -29,16 +35,16 @@ def main():
 
     args = input_parser.parse_args()
 
-    words = args.word.split(",")
-    wiki = wiktionaryReader.wiktionaryReader()
+    test_words = args.word.split(",")
+    wiki = wiktionary_reader.wiktionaryReader()
     mirriam = mirriamReader.mirriamReader()
 
-    if len(words) > 2:
+    if len(test_words) > 2:
         print("Sorry, this only accepts two words.")
         exit(1)
 
     word_data = []
-    for word in words:
+    for word in test_words:
         new_word = wordData(word)
         if args.wiki and args.mirriam:
             # Lookup word in wiki and mirriam

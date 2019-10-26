@@ -23,13 +23,9 @@ class utility:
     def create_letter_list(word):
         letter_list = []
 
-        for letter in word:
+        for letter in word.word:
             letter_list.append(letter)
 
         return letter_list
 
-    @staticmethod
-    def add_letters(word_dict, list):
-        word_dict['random_index'] = random.randint(0, len(list) - 1)
-        word_dict['word'] = word_dict['word'] + word_dict['random_index']
-        list.pop(random_index)
+

@@ -1,5 +1,3 @@
-
-
 class wordData:
     def __init__(self, word):
         self.word = word

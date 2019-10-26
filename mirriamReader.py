@@ -1,7 +1,6 @@
-import baseDictApi
-import logging
+from objects.dictApi.baseDictApi import dictionaryAPIBaseClass
 
-class mirriamReader(baseDictApi.dictionaryAPIBaseClass):
+class mirriamReader(dictionaryAPIBaseClass):
 
     def __init__(self):
         pass
