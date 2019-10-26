@@ -8,5 +8,5 @@ class dictionaryAPIBaseClass(ABC):
     def __del__(self):
         pass
 
-    def get_word_data(self):
+    def word_definition(self):
         pass

@@ -1,8 +1,9 @@
-import dictionaryApiBaseClass
+import baseDictApi
 from wiktionaryparser import WiktionaryParser
 import random
 
-class wiktionaryReader(dictionaryApiBaseClass.dictionaryAPIBaseClass):
+
+class wiktionaryReader(baseDictApi.dictionaryAPIBaseClass):
 
     def __init__(self):
         self.parser = WiktionaryParser()
@@ -18,6 +19,6 @@ class wiktionaryReader(dictionaryApiBaseClass.dictionaryAPIBaseClass):
             exit(1)
 
         definition_list = retrieved_definitions[0]['definitions'][0]['text']
-        definition=definition_list[random.randrange(1, len(definition_list))]
+        definition = definition_list[random.randrange(1, len(definition_list))]
         return definition
 

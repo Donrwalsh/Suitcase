@@ -1,7 +1,7 @@
-import dictionaryApiBaseClass
+import baseDictApi
 import logging
 
-class mirriamReader(dictionaryApiBaseClass.dictionaryAPIBaseClass):
+class mirriamReader(baseDictApi.dictionaryAPIBaseClass):
 
     def __init__(self):
         pass
@@ -9,5 +9,5 @@ class mirriamReader(dictionaryApiBaseClass.dictionaryAPIBaseClass):
     def __del__(self):
         pass
 
-    def get_word_data(self):
+    def word_definition(self):
         pass
