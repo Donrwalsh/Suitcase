@@ -4,6 +4,5 @@ from suitcase_web import suitcase_app
 @suitcase_app.route('/')
 @suitcase_app.route('/index')
 def index():
-	def index():
-		user = {'username': 'Miguel'}
-		return render_template('index.html', title='Home', user=user)
+	user = {'username': 'Miguel'}
+	return render_template('index.html', title='Home', user=user)
