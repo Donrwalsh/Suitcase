@@ -14,7 +14,6 @@ class combine(combiner):
 
         if len(letter_list_one) == 1 or len(letter_list_two) == 1:
             print('That\'s not very fun, try again!')
-
             exit(0)
 
         popped_letter = ''

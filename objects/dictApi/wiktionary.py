@@ -22,3 +22,10 @@ class wiktionary(dictionaryAPIBaseClass):
         definition = definition_list[random.randrange(1, len(definition_list))]
         return definition
 
+    def word_check(self, word):
+
+        if not self.parser.fetch(word)[0]['definitions']:
+            return False
+        else:
+            return True
+

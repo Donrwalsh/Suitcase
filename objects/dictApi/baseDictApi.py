@@ -10,3 +10,6 @@ class dictionaryAPIBaseClass(ABC):
 
     def word_definition(self):
         pass
+
+    def word_check(self):
+        pass
