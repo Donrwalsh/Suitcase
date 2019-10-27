@@ -7,3 +7,5 @@ jenkins_data/
 =======
 pyenv_da/
 >>>>>>> Stashed changes
+venv/
+__pycache__/
