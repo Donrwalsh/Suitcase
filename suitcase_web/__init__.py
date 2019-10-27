@@ -1,5 +1,5 @@
-from flask import flask
+from flask import Flask
 
 suitcase_app = Flask(__name__)
 
-from app import routes
+from suitcase_web import routes
