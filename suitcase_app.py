@@ -1,5 +1,5 @@
 from suitcase_web import suitcase_app, db
-from suitcase_app.models import Word, Definitions
+from suitcase_web.models import Word, Definitions
 
 @app.shell_context_processor
 def make_shell_context():
