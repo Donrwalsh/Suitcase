@@ -1,4 +1,4 @@
-from suitcase_app import suitcase_app
+from suitcase_web import suitcase_app
 
 @app.route('/')
 @app.route('/index')
