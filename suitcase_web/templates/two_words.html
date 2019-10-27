@@ -3,7 +3,6 @@
 {% block content %}
     <h1>Suitcase/h1>
     <form action="" method="post" novalidate>
-        {{ form.hidden_tag() }}
         <p>
             {{ form.word_one.label }}<br>
             {{ form.word_one(size=32) }}
@@ -13,5 +12,5 @@
             {{ form.word_two(size=32) }}
         </p>
         <p>{{ form.submit() }}</p>
-    </form?
+    </form>
 {% endblock %}
