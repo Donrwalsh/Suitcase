@@ -8,7 +8,7 @@ import random
 
 def main():
 
-    test_words = ['gorilla', 'friend', 'python', 'jumble', 'easy', 'difficult', 'answer',  'xylophone', 'earsplitting',
+    test_words = ['notaword', 'gorilla']
              'utmost', 'unsightly', 'efficacious', 'contagious', 'amusement', 'and', 'pants', 'the', 'a', 'i']
 
     word_one = wordData(test_words[random.randint(0, len(test_words)-1)])
