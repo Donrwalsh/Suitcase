@@ -1,5 +1,5 @@
 from suitcase_web import db
-import datetime
+from datetime import datetime
 
 class Word(db.Model):
     id = id = db.Column(db.Integer, primary_key=True)
