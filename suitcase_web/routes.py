@@ -20,4 +20,4 @@ def index():
 @suitcase_app.route('/two_words')
 def two_words():
 	form = two_words
-	return return_template('two_words.html', title='Suitcase', form=form)
+	return render_template('two_words.html', title='Suitcase', form=form)
