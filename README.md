@@ -27,3 +27,7 @@ Implement "is this a word" check
 
 Catch errors with mixing definitions (validate that they're addressed by 
 if statement conditions)
+
+# Flask
+
+Mega tutorial: https://blog.miguelgrinberg.com/post/the-flask-mega-tutorial-part-iv-database
